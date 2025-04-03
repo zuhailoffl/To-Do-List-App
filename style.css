@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h1 {
+    margin-bottom: 10px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Task Input Section */
+.task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Add Task Button */
+button {
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Task List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Task Items */
+li {
+    background: #ddd;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Completed Task */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+.dark-mode input, .dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid white;
+}
+/* Animation for adding tasks */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+li {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Overdue Task Warning */
+.overdue {
+    background-color: #ffcccc !important;
+    color: #d9534f !important;
+    font-weight: bold;
+}
+/* Notification Banner */
+#notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 10px;
+    background: #28a745;
+    transition: width 0.5s ease-in-out;
+}
+.complete-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.complete-btn:hover {
+    background: #218838;
+}
