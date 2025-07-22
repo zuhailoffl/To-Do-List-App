@@ -1,0 +1,1 @@
+This is a basic To-Do List application designed to help manage daily tasks efficiently. It allows users to add new tasks, mark them as completed, and delete them when no longer needed. The focus of this project was on creating a minimal and user-friendly interface with core functionality.
